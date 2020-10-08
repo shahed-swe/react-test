@@ -3,7 +3,8 @@ import React, {Component} from 'react';
 class Footer extends Component{
 
     state = {
-        name: "Shahed"
+        name: "Shahed",
+        age: 15
     }
 
     change = (evt) =>{
@@ -33,9 +34,23 @@ class Footer extends Component{
 }
 
 class ShowMessage extends Component{
+
+    state = {
+        age: 15
+    }
+
     render(){
         if(this.props.toShow){
-            return <h1>This function exists</h1>
+            return (
+                <React.Fragment>
+                {this.state.age === 17 ? (
+                    <h2>His age is {this.state.age}</h2>
+                ) : (
+                <h2>His age is {"Above 15"}</h2>
+                )}
+                <h1>Hello this function exist</h1>
+                </React.Fragment>
+            );
         }else{
             return <h2>This function doesn't exists</h2>
         }
