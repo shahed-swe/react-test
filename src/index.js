@@ -4,9 +4,11 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {Route, BrowserRouter} from  'react-router-dom';
+import Header from './components/header';
+import {Footer, } from  './components/footer'
 
 const context = React.createContext();
-export const ctxConsumer = context.Consumer;
+export const CtxConsumer = context.Consumer;
 
 
 const students = [
@@ -22,7 +24,9 @@ const routing = (
   <BrowserRouter>
     <context.Provider value={{students : students}}>
       <div>
-        <Route path="/" component={App}></Route>
+        <Route exact path="/" component={App}></Route>
+        <Route path="/header" component={Header}></Route>
+        <Route path="/footer" component={Footer}></Route>
       </div>
     </context.Provider>
   </BrowserRouter>
