@@ -6,10 +6,10 @@ import * as serviceWorker from './serviceWorker';
 import {Route, BrowserRouter} from  'react-router-dom';
 
 const context = React.createContext();
-const ctxConsumer = context.Consumer;
+export const ctxConsumer = context.Consumer;
 
 
-const student = [
+const students = [
     'razib',
     'atik',
     'azad',
@@ -20,7 +20,7 @@ const student = [
 
 const routing = (
   <BrowserRouter>
-    <context.Provider value={{students: student}}>
+    <context.Provider value={{students : students}}>
       <div>
         <Route path="/" component={App}></Route>
       </div>
