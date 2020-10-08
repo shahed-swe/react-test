@@ -12,10 +12,9 @@ class Header extends Component{
                     <div>
                         {context.students.map(student => {
                             return (
-                                // <div key={student}>
-                                //     <h1>{student}</h1>
-                                // </div>
-                                console.log({student})
+                                <div key={student}>
+                                    <h1>{student}</h1>
+                                </div>
                             )
                         })}
                     </div>

@@ -25,8 +25,8 @@ const routing = (
     <context.Provider value={{students : students}}>
       <div>
         <Route exact path="/" component={App}></Route>
-        <Route path="/header" component={Header}></Route>
-        <Route path="/footer" component={Footer}></Route>
+        <Route exact path="/header" component={Header}></Route>
+        <Route exact path="/footer" component={Footer}></Route>
       </div>
     </context.Provider>
   </BrowserRouter>
