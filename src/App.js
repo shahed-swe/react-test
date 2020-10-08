@@ -6,12 +6,17 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import Footer from './components/footer'
 
+
+function createAlert(){
+    alert("Thank for comming here")
+}
+
 function App() {
   return (
     <div className="App">
       <Header/>
       <h1 className="text-primary">Hello</h1>
-      <Footer info="first footer" take="second footer" />
+      <Footer info="first footer" take="second footer" myAlert={createAlert} />
     </div>
   );
 }
