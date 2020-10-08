@@ -12,6 +12,10 @@ class Footer extends Component{
          this.setState({name: evt.target.value})
     }
 
+    componentDidMount(){
+        this.setState({name: 'Talukder'})
+    }
+
     CreateAlert(){
         alert("This is not gonna be me");
     }
@@ -28,4 +32,15 @@ class Footer extends Component{
     }
 }
 
-export default Footer;
+class ShowMessage extends Component{
+    render(){
+        if(this.props.toShow){
+            return <h1>This function exists</h1>
+        }else{
+            return <h2>This function doesn't exists</h2>
+        }
+
+    }
+}
+
+export {Footer, ShowMessage};
