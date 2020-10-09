@@ -6,8 +6,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import {Footer, ShowMessage} from './components/footer';
 import styled from 'styled-components';
-import Numbers from './components/numbers'
-
+import Numbers from './components/numbers';
+import Inner from './components/inner';
 // here are all of those function that we need here
 
 function createAlert(){
@@ -31,6 +31,7 @@ function App() {
         <Paragraph>New Style</Paragraph>
       </form>
       <Numbers/>
+      <Inner/>
     </div>
   );
 }
